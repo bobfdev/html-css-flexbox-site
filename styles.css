@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* row is the default flex-direction */
+.flex-container {
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.flex-container::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.flex-container0 {
+    display: flex;
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+}
+
+.flex-container-reverse {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: start;
+    flex-direction: row-reverse;
+}
+
+.flex-container1 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: start;
+}
+
+.flex-container2 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: end;
+}
+
+.flex-container3 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: center;
+}
+
+.flex-container4 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: space-around;
+}
+
+.flex-container5 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: space-between;
+}
+
+.flex-container6 {
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: space-between;
+    height: 400px;
+    align-items: center;
+}
+
+.flex-container7 {
+    display: flex;
+    background-color: #f4f4f4;
+    /* justify content is always on the main axis */
+    justify-content: space-between;
+    height: 400px;
+    /* align-items is always on the cross axis */
+    align-items: start;
+    flex-direction: column;
+}
+
+.flex-container8 {
+    display: flex;
+    background-color: #f4f4f4;
+    /* justify content is always on the main axis */
+    justify-content: start;
+    height: 400px;
+    /* align-items is always on the cross axis */
+    align-items: start;
+    flex-direction: column;
+}
+
+.flex-container9 {
+    display: flex;
+    background-color: #f4f4f4;
+    /* justify content is always on the main axis */
+    justify-content: end;
+    height: 400px;
+    /* align-items is always on the cross axis */
+    align-items: start;
+    flex-direction: column;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+}
+
+.item-order {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+}
+
+/* Item 1 is 2nd in order */
+.item-order:nth-of-type(1) {
+    order: 2;
+}
+/* Item 2 is 1st in order */
+.item-order:nth-of-type(2) {
+    order: 1;
+}
+/* Item 3 is 3rd in order */
+.item-order:nth-of-type(3) {
+    order: 3;
+}
+
+.item-basis {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-basis:nth-of-type(1) {
+    flex-basis: 50px;
+}
+
+.item-basis:nth-of-type(2) {
+    flex-basis: 200px;
+}
+
+.item-basis:nth-of-type(3) {
+    flex-basis: 400px;
+}
+
+.item-grow {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-grow:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.item-grow:nth-of-type(2) {
+    flex-grow: 2;
+}
+
+.item-grow:nth-of-type(3) {
+    flex-grow: 1;
+}
+
+.item-grow1 {
+    flex-basis: 100px;
+    flex-grow: 1;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-flex-property {
+    /* flex order from L to R: flex-grow amount, flex-shrink amount, flex-basis amount */
+    flex: 1 0 0;
+    /* flex: 1   will also work */
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item0 {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .item:nth-last-of-type(1) {
+    align-items: start;
+} */
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+    align-self: start;
+}
+
+/* .item:nth-of-type(3) {
+    align-self: end;
+} */
+
+.item3 {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+    align-self: end;
+}
